@@ -1,0 +1,27 @@
+{
+  "FailedTests": [
+    {
+      "file": "test/test_calculator.c",
+      "test": "test_subtract",
+      "line": 19,
+      "message": "Expected 2 Was -1"
+    }
+  ],
+  "PassedTests": [
+    {
+      "file": "test/test_calculator.c",
+      "test": "test_add"
+    },
+    {
+      "file": "test/test_calculator.c",
+      "test": "test_multiply"
+    }
+  ],
+  "IgnoredTests": [],
+  "Summary": {
+    "total_tests": 3,
+    "passed": 2,
+    "ignored": 0,
+    "failures": 1
+  }
+}
