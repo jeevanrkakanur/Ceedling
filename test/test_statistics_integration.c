@@ -1,5 +1,6 @@
 #include "unity.h"
 #include "statistics.h"
+#include "calculator.h"
 
 void setUp(void) {}
 void tearDown(void) {}
