@@ -65,6 +65,17 @@
   :support: []
   :libraries: []
 
+# =========================================================================
+#   INTEGRATION OPTION BLOCK (Maps your custom test:integration path)
+# =========================================================================
+:options:
+  :integration:
+    :paths:
+      :test:
+        - +:test/integration/**   # Directs execution targets straight here
+    :project:
+      :build_root: build/integration # Isolates integration binaries from unit test artifacts
+
 :files:
   :test: []
   :source: []
