@@ -51,30 +51,18 @@
   :executable: .out
 
 # =========================================================================
-#   SPLIT PATHS CONFIGURATION
+#   NATIVE SPLIT PATHS CONFIGURATION
 # =========================================================================
 :paths:
   :test:
-    - +:test/unit/**          # Scans only the unit directory for test:all
-  :integration:
-    - +:test/integration/**   # Scans only the integration directory for test:integration
+    - +:test/unit/**          # Default for unit sweep
+    - +:test/integration/**   # Includes integration folder for native pattern matching
   :source:
     - src/**
   :include:
     - src/** 
   :support: []
   :libraries: []
-
-# =========================================================================
-#   INTEGRATION OPTION BLOCK (Maps your custom test:integration path)
-# =========================================================================
-:options:
-  :integration:
-    :paths:
-      :test:
-        - +:test/integration/**   # Directs execution targets straight here
-    :project:
-      :build_root: build/integration # Isolates integration binaries from unit test artifacts
 
 :files:
   :test: []
