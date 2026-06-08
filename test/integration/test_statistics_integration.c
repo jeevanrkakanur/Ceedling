@@ -9,3 +9,11 @@ void test_average(void)
 {
     TEST_ASSERT_EQUAL(15, average(10, 20));
 }
+void test_average(void)
+{
+    TEST_ASSERT_EQUAL(10, average(10, 10));
+}
+void test_average(void)
+{
+    TEST_ASSERT_EQUAL(20, average(20, 20));
+}
