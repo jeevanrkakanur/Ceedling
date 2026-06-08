@@ -1,21 +1,16 @@
 # =========================================================================
 #   Ceedling - Test-Centered Build System for C
-#   ThrowTheSwitch.org
-#   Copyright (c) 2010-25 Mike Karlesky, Mark VanderVoord, & Greg Williams
-#   SPDX-License-Identifier: MIT
 # =========================================================================
 
 ---
 :project:
   :which_ceedling: gem
   :ceedling_version: 1.0.1
-
   :use_mocks: TRUE
   :use_test_preprocessor: :none  
   :use_deep_preprocessor: :none  
   :use_backtrace: :simple        
   :use_decorators: :auto         
-
   :build_root: build
   :test_file_prefix: test_
   :default_tasks:
@@ -55,9 +50,14 @@
 :extension:
   :executable: .out
 
+# =========================================================================
+#   SPLIT PATHS CONFIGURATION
+# =========================================================================
 :paths:
   :test:
-    - +:test/**
+    - +:test/unit/**          # Scans only the unit directory for test:all
+  :integration:
+    - +:test/integration/**   # Scans only the integration directory for test:integration
   :source:
     - src/**
   :include:
@@ -81,11 +81,9 @@
     - :callback
   :verbosity:  2                   
   :when_no_prototypes:  :warn      
-
   :skeleton_path:  ''              
   :mock_prefix:  'mock_'           
   :mock_suffix:  ''                
-
   :strippables:  ['(?:__attribute__\s*\([ (]*.*?[ )]*\)+)']
   :attributes:
      - __ramfunc
@@ -99,7 +97,6 @@
      - __fastcall
   :treat_externs:  :exclude        
   :treat_inlines:  :exclude        
-
   :treat_as:                       
     uint8:    HEX8
     uint16:   HEX16
@@ -108,7 +105,6 @@
     bool:     UINT8
   :memcmp_if_unknown:  true        
   :when_ptr:  :compare_data        
-
   :weak:  ''                       
   :enforce_strict_ordering: true   
   :fail_on_unexpected_calls: true  

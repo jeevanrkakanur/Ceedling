@@ -2,10 +2,6 @@
 
 /*=======Automagically Detected Files To Include=====*/
 #include "unity.h"
-/* injected defines for unity settings, etc */
-#ifndef UNITY_EXCLUDE_FLOAT
-#define UNITY_EXCLUDE_FLOAT
-#endif /* UNITY_EXCLUDE_FLOAT */
 #include "calculator.h"
 
 int GlobalExpectCount;
@@ -18,6 +14,7 @@ extern void tearDown(void);
 extern void test_add(void);
 extern void test_subtract(void);
 extern void test_multiply(void);
+extern void test_divide(void);
 
 
 /*=======Mock Management=====*/
@@ -95,6 +92,8 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
       UNITY_PRINT_EOL();
       UnityPrint("  test_multiply");
       UNITY_PRINT_EOL();
+      UnityPrint("  test_divide");
+      UNITY_PRINT_EOL();
       return 0;
     }
     return parse_status;
@@ -104,6 +103,7 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
   run_test(test_add, "test_add", 12);
   run_test(test_subtract, "test_subtract", 17);
   run_test(test_multiply, "test_multiply", 22);
+  run_test(test_divide, "test_divide", 27);
 
   return UNITY_END();
 }

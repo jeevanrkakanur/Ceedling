@@ -1,0 +1,23 @@
+---
+:source:
+  :file: test/test_temperature.c
+  :dirname: test
+  :basename: test_temperature.c
+:successes:
+- :test: test_celsius_to_fahrenheit
+  :line: 7
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fahrenheit_to_celsius
+  :line: 13
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 2
+  :passed: 2
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.10293330001877621

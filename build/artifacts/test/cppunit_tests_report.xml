@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <TestRun>
-  <FailedTests>
-    <Test id="1">
-      <Name>test/test_calculator.c::test_subtract</Name>
-      <FailureType>Assertion</FailureType>
-      <Location>
-        <File>test/test_calculator.c</File>
-        <Line>19</Line>
-      </Location>
-      <Message>Expected 2 Was -1</Message>
-    </Test>
-  </FailedTests>
+  <FailedTests/>
   <SuccessfulTests>
-    <Test id="2">
+    <Test id="1">
       <Name>test/test_calculator.c::test_add</Name>
+    </Test>
+    <Test id="2">
+      <Name>test/test_calculator.c::test_subtract</Name>
     </Test>
     <Test id="3">
       <Name>test/test_calculator.c::test_multiply</Name>
     </Test>
+    <Test id="4">
+      <Name>test/test_calculator.c::test_divide</Name>
+    </Test>
+    <Test id="5">
+      <Name>test/test_statistics_integration.c::test_average</Name>
+    </Test>
   </SuccessfulTests>
   <IgnoredTests/>
   <Statistics>
-    <Tests>3</Tests>
+    <Tests>5</Tests>
     <Ignores>0</Ignores>
-    <FailuresTotal>1</FailuresTotal>
+    <FailuresTotal>0</FailuresTotal>
     <Errors>0</Errors>
-    <Failures>1</Failures>
+    <Failures>0</Failures>
   </Statistics>
 </TestRun>

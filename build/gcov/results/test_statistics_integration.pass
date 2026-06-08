@@ -1,0 +1,23 @@
+---
+:source:
+  :file: test/test_statistics_integration.c
+  :dirname: test
+  :basename: test_statistics_integration.c
+:successes:
+- :test: test_average
+  :line: 8
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 1
+  :passed: 1
+  :failed: 0
+  :ignored: 0
+:stdout:
+- libgcov profiling error:/cygdrive/d/ceedling_proj/calculator/build/gcov/out/test_statistics_integration/statistics.gcda:overwriting
+  an existing profile data with a different timestamp
+- libgcov profiling error:/cygdrive/d/ceedling_proj/calculator/build/gcov/out/test_statistics_integration/calculator.gcda:overwriting
+  an existing profile data with a different timestamp
+:time: 0.2351650999917183

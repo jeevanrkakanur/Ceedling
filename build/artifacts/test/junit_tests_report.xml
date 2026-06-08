@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<testsuites tests="3" failures="1" time="0.199">
-  <testsuite name="test/test_calculator" tests="3" failures="1" skipped="0" errors="0" time="0.199">
+<testsuites tests="5" failures="0" time="0.394">
+  <testsuite name="test/test_calculator" tests="4" failures="0" skipped="0" errors="0" time="0.172">
     <testcase name="test_add" time="0.000"/>
+    <testcase name="test_subtract" time="0.000"/>
     <testcase name="test_multiply" time="0.000"/>
-    <testcase name="test_subtract" time="0.000">
-      <failure message="Expected 2 Was -1" />
-    </testcase>
+    <testcase name="test_divide" time="0.000"/>
+  </testsuite>
+  <testsuite name="test/test_statistics_integration" tests="1" failures="0" skipped="0" errors="0" time="0.222">
+    <testcase name="test_average" time="0.000"/>
   </testsuite>
 </testsuites>
