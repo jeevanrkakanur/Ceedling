@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Test/test_statistics_integration.c
 #include "unity.h"
 #include "statistics.h"
 #include "calculator.h"
@@ -29,3 +30,16 @@ test_statistics_integration.c
 
 
 
+=======
+#include "unity.h"
+#include "statistics.h"
+#include "calculator.h"
+
+void setUp(void) {}
+void tearDown(void) {}
+
+void test_average(void)
+{
+    TEST_ASSERT_EQUAL(15, average(10, 20));
+}
+>>>>>>> 2d104c4 (Add test folder):test/test_statistics_integration.c
