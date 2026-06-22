@@ -2,30 +2,26 @@
   "FailedTests": [],
   "PassedTests": [
     {
-      "file": "test/test_calculator.c",
+      "file": "test/unit/test_calculator.c",
       "test": "test_add"
     },
     {
-      "file": "test/test_calculator.c",
+      "file": "test/unit/test_calculator.c",
       "test": "test_subtract"
     },
     {
-      "file": "test/test_calculator.c",
+      "file": "test/unit/test_calculator.c",
       "test": "test_multiply"
     },
     {
-      "file": "test/test_calculator.c",
+      "file": "test/unit/test_calculator.c",
       "test": "test_divide"
-    },
-    {
-      "file": "test/test_statistics_integration.c",
-      "test": "test_average"
     }
   ],
   "IgnoredTests": [],
   "Summary": {
-    "total_tests": 5,
-    "passed": 5,
+    "total_tests": 4,
+    "passed": 4,
     "ignored": 0,
     "failures": 0
   }

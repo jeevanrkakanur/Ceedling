@@ -1,7 +1,7 @@
 ---
 :source:
-  :file: test/test_calculator.c
-  :dirname: test
+  :file: test/unit/test_calculator.c
+  :dirname: test/unit
   :basename: test_calculator.c
 :successes:
 - :test: test_add
@@ -28,4 +28,4 @@
   :failed: 0
   :ignored: 0
 :stdout: []
-:time: 0.1717175999947358
+:time: 0.08296189999964554
