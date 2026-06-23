@@ -1,6 +1,13 @@
 #include "unity.h"
 #include "calculator.h"
 
+// FIXED: Native, local macro override to stop execution loops instantly after any failure inside this file
+#undef RUN_TEST
+#define RUN_TEST(TestFunc, TestLineNum)                   \
+    if (Unity.TestFailures == 0) {                        \
+        UnityDefaultTestRun(TestFunc, #TestFunc, TestLineNum); \
+    }
+
 void setUp(void)
 {
     // Clean and empty
@@ -18,8 +25,8 @@ void test_add(void)
 
 void test_subtract(void)
 {
-    // Keeping this as a failure case (Expected 2, Was -2) to trigger your fail-fast rules
-    TEST_ASSERT_EQUAL(2, subtract(2,4)); 
+    // This intentional failure case ensures the reporting engine aborts
+    TEST_ASSERT_EQUAL(2, subtract(2,4));
 }
 
 void test_multiply(void)
