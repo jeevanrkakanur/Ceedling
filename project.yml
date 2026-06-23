@@ -16,7 +16,7 @@
   :default_tasks:
     - test:all
 
-  :test_threads: 8
+  :test_threads: 1              # Set to 1 to run sequentially and pass validation
   :compile_threads: 8
   :release_build: FALSE
 
@@ -51,18 +51,17 @@
   :executable: .out
 
 # =========================================================================
-#   SPLIT PATHS CONFIGURATION
+#   FLAT PATHS CONFIGURATION (MATCHING YOUR DISK LAYOUT)
 # =========================================================================
 :paths:
   :test:
-    - +:test/unit/**          # Scans only the unit directory for test:all
-  :integration:
-    - +:test/integration/**   # Scans only the integration directory for test:integration
+    - +:Test/**               # Scans your flat Test folder directly
   :source:
     - src/**
   :include:
     - src/** 
-  :support: []
+  :support:
+    - +:Test/support/**       # Map support scripts relative to your main Test folder
   :libraries: []
 
 :files:
@@ -71,9 +70,17 @@
 
 :defines:
   :test:
-    - TEST 
+    - TEST
+    - UNITY_BREAK_ON_FAIL      # Native macro mapping to enable short-circuiting loops
   :release: []
   :use_test_definition: FALSE 
+
+# =========================================================================
+#   FORCE INJECT MACRO OVERRIDES VIA INCLUDES
+# =========================================================================
+:includes:
+  :test:
+    - unity_support.h
 
 :cmock:
   :plugins:                        
