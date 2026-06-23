@@ -1,7 +1,7 @@
 #include "unity.h"
 #include "calculator.h"
 
-// FIXED: Native, local macro override to stop execution loops instantly after any failure inside this file
+// FIXED: Force-injecting the loop interceptor directly inside the test file compilation block
 #undef RUN_TEST
 #define RUN_TEST(TestFunc, TestLineNum)                   \
     if (Unity.TestFailures == 0) {                        \
