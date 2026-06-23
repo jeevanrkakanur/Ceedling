@@ -80,7 +80,7 @@
 # =========================================================================
 :includes:
   :test:
-    - unity_support.h
+    - Test/support/unity_support.h   # FIXED: Provided the relative folder path string
 
 :cmock:
   :plugins:                        
