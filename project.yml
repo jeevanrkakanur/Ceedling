@@ -60,6 +60,7 @@
     - src/**
   :include:
     - src/** 
+    - Test/support/**         # FIXED: Registered your support subfolder as a core include search path
   :support:
     - +:Test/support/**       # Map support scripts relative to your main Test folder
   :libraries: []
@@ -79,8 +80,7 @@
 #   FORCE INJECT MACRO OVERRIDES VIA INCLUDES
 # =========================================================================
 :includes:
-  :test:
-    - Test/support/unity_support.h   # FIXED: Provided the relative folder path string
+  :test: []                    # Reverted to a clean, empty list to prevent lookup path blocks
 
 :cmock:
   :plugins:                        
