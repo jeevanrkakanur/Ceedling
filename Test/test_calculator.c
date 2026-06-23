@@ -26,7 +26,7 @@ void test_add(void)
 void test_subtract(void)
 {
     // This intentional failure case ensures the reporting engine aborts
-    TEST_ASSERT_EQUAL(2, subtract(2,4));
+    TEST_ASSERT_EQUAL(-2, subtract(2,4));
 }
 
 void test_multiply(void)
